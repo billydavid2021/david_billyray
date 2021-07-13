@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="background">
+
+<div class="navigation">
+	<a class="a active" href="#">Home</a>
+	<a class="b " href="#">About Me</a>
+	<a class="c " href="#">Gallery</a>
+	<a class="d " href="#">Contact Us</a>
+</div>
+<div class="content">
+	<div class="home">
+		<h1> Billy Ray David</h1>
+		<h3>Information Technology Student</h3>
+	</div>
+	
+	<div class="aboutme">
+		<p>Hello World,<br>
+		Welcome to my website. I am Billy Ray D. David Currently studying Information Technology at Cavite State University.<br><br>
+		I've gone to Bea Therese School when I was in preschool, Elementary at Sto. Nino De Lebble Academy,Junior highschool at Trece Martirez City National Highschool
+		and now to my present which is Cavite state university.<br>
+		</p>
+		<p>My hobbies are Creating videos about my travels with the use of my bike together with my team ULAYAW, you can see our youtube channel under this text 
+		I am current the editor of the videos that we are creating. I also love playing instruments like the Guitar, Violin, Piano and many more. <br><br>
+		
+		
+	
+		</p>
+		
+		
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/LdX1H8D8yAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	
+	<div class="gallery">
+		<div class="image">
+			<img src="images/1.jpg" />
+☻		</div>
+		<div class="image">
+			<img src="images/2.jpg" />
+☻		</div>
+		<div class="image">
+			<img src="images/3.jpg" />
+☻		</div>
+		<div class="image">
+			<img src="images/4.jpg" />
+☻		</div>
+		<div class="image">
+			<img src="images/5.jpg" />
+☻		</div>
+		<div class="image">
+			<img src="images/6.jpg" />
+☻		</div>
+		<div class="image">
+			<img src="images/7.jpg" />
+☻		</div>
+		<div class="image">
+			<img src="images/8.jpg" />
+☻		</div>
+		<div class="image">
+			<img src="images/9.jpg" />
+☻		</div>
+	</div>
+	
+	<div class="contactus">
+		<div class="contactform">
+			<form action="index.html" method="post">
+				<input type="text" name="" class="inputtext" value="First Name">
+				<input type="text" name="" class="inputtext" value="Last Name">
+				<input type="text" name="" class="inputtext" value="Your Email">
+				<textarea cols="4" rows="6" class="inputmessage">Enter Your Message</textarea>
+				<input type="button" name="" class="submitbutton" value="Submit">		
+			</form>
+			<a href="https://www.facebook.com/billy573"><img src="images/fb.png" /></a>
+			<a href="https://www.youtube.com/channel/UCANOftzfoYxlF_W2dVdjejw"><img src="images/yt.png" /></a>
+			<a href="https://www.instagram.com/billydgoat0/"><img src="images/insta.png" /></a>
+		</div>
+	</div>
+</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$('a').click(function(){
+			var selected = $(this);
+			$('a').removeClass('active');
+			$(selected).addClass('active');
+		});
+		
+		var $a = $('.a'),
+		$b = $('.b'),
+		$c = $('.c'),
+		$d = $('.d')
+		$home = $('.home'),
+		$aboutme = $('.aboutme'),
+		$gallery = $('.gallery'),
+		$contactus = $('.contactus');
+		
+		$a.click(function(){
+			$home.fadeIn();	
+			$aboutme.fadeOut();
+			$gallery.fadeOut();
+			$contactus.fadeOut();
+		});
+		$b.click(function(){
+			$aboutme.fadeIn();
+			$home.fadeOut();
+			$gallery.fadeOut();
+			$contactus.fadeOut();
+		});
+		$c.click(function(){
+			$gallery.fadeIn();	
+			$home.fadeOut();
+			$aboutme.fadeOut();
+			$contactus.fadeOut();
+		});
+		$d.click(function(){
+			$contactus.fadeIn();
+			$home.fadeOut();
+			$aboutme.fadeOut();
+			$gallery.fadeOut();
+		});
+	});
+</script>	
+</body>
+</html>
